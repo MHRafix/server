@@ -26,5 +26,5 @@ export class CreateServiceTypeDto {
   @ApiProperty({ required: false })
   @IsOptional()
   @IsNumber()
-  itemsCount: number;
+  vendorCount: number;
 }
