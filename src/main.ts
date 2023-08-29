@@ -25,7 +25,7 @@ async function bootstrap() {
 
   // swagger config
   const config = new DocumentBuilder()
-    .setTitle('Reserve Table API')
+    .setTitle('Daily Mart API')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);

@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { BusinessVendorModule } from './api/business-vendor/business-vendor.module';
 import { ServiceTypesModule } from './api/service-types/service-types.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -21,6 +22,7 @@ import config from './app/config';
     MongooseModule.forRoot(process.env.MONGODB_CONNECTION_URI),
     // api modules here
     ServiceTypesModule,
+    BusinessVendorModule,
   ],
   controllers: [AppController],
   providers: [AppService],

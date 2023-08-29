@@ -28,7 +28,7 @@ export class ServiceTypes {
   image: string;
 
   @Prop()
-  itemsCount: number;
+  vendorCount: number;
 }
 
 export const ServiceTypesSchema = SchemaFactory.createForClass(ServiceTypes);
