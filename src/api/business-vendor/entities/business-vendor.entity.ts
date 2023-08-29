@@ -2,7 +2,6 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 export type BusinessVendorDocument = BusinessVendor & Document;
 
-@Schema()
 export class LocationSchema {
   @Prop()
   lat: number;
