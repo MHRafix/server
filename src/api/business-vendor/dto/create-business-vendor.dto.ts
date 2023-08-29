@@ -1,6 +1,21 @@
-import { LocationDto } from '@/app/shared/entity.shared/Location.entity';
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, IsOptional } from 'class-validator';
+
+export class LocationDto {
+  @ApiProperty({ required: true })
+  @IsNotEmpty()
+  @IsNumber()
+  lat: number;
+
+  @ApiProperty({ required: true })
+  @IsNotEmpty()
+  @IsNumber()
+  lng: number;
+
+  @ApiProperty({ required: true })
+  @IsNotEmpty()
+  address: string;
+}
 
 export class CreateBusinessVendorDto {
   @ApiProperty({ required: true })

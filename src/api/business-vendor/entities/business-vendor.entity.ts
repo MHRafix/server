@@ -1,7 +1,18 @@
-import { LocationSchema } from '@/app/shared/entity.shared/Location.entity';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 export type BusinessVendorDocument = BusinessVendor & Document;
+
+@Schema()
+export class LocationSchema {
+  @Prop()
+  lat: number;
+
+  @Prop()
+  lng: number;
+
+  @Prop()
+  address: string;
+}
 
 @Schema({ timestamps: true })
 export class BusinessVendor {
