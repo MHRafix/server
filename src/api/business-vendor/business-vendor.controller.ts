@@ -28,8 +28,8 @@ export class BusinessVendorController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.businessVendorService.findOne(id);
+  findVendorsByServiceId(@Param('id') id: string) {
+    return this.businessVendorService.findVendorsByServiceId(id);
   }
 
   @Patch(':id')

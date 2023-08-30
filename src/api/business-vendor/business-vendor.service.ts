@@ -32,12 +32,10 @@ export class BusinessVendorService {
     }
   }
 
-  async findOne(_id: string) {
+  async findVendorsByServiceId(_id: string) {
     try {
       const vendors = await this.businessVendorModel.find({});
-      return {
-        data: vendors.filter((v) => v.serviceId === _id),
-      };
+      return vendors.filter((v) => v.serviceId === _id);
     } catch (err) {
       return new ForbiddenException();
     }
